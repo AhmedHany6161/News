@@ -8,10 +8,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.news.R
+import com.example.news.model.entitys.News
 
 class FavpuriteAdaper(var favouriteViewModel: FavouriteViewModel) : RecyclerView.Adapter<FavpuriteAdaper.MyViewHolder>() {
-    lateinit var models: List<Hourly>
+    lateinit var models: List<News>
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var title = itemView.findViewById<TextView>(R.id.title)
@@ -20,8 +22,15 @@ class FavpuriteAdaper(var favouriteViewModel: FavouriteViewModel) : RecyclerView
         private var image = itemView.findViewById<ImageView>(R.id.imageView)
 
         @RequiresApi(Build.VERSION_CODES.O)
-        fun binding(hourly: Hourly) {
-
+        fun binding(news: News) {
+            title.text = news.title
+            outhor.text=news.author
+            date.text=news.publishedAt
+            Glide.with(itemView)  //2
+                .load(news.urlToImage) //3
+                .centerCrop() //4
+                .placeholder(R.drawable.ic_picture)
+                .into(image)
         }
     }
 

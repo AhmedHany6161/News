@@ -13,15 +13,16 @@ class Favourite : AppCompatActivity() {
     lateinit var binding :ActivityFavouriteBinding
     lateinit var recyclerView: RecyclerView
     lateinit var favpuriteAdaper: FavpuriteAdaper
+    lateinit var favpuriteViewModel:FavouriteViewModel;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        favpuriteAdaper
+        favpuriteAdaper= FavpuriteAdaper(favpuriteViewModel)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_favourite)
         recyclerView=binding.recyclerviewFav
         recyclerView.setHasFixedSize(true)
         val gridLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView.layoutManager = gridLayoutManager
-        //recyclerView.adapter = adapter
+        recyclerView.adapter = favpuriteAdaper
 
     }
 }
