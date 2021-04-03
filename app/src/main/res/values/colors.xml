@@ -10,6 +10,7 @@
     <color name="darkRed">#732002</color>
     <color name="darkOrange">#D98B48</color>
     <color name="liteOrange">#F2AC57</color>
-    <color name="background">#BFBAB0</color>
+    <color name="background">#EAEAEA</color>
     <color name="yellow">#D9B95B</color>
+    <color name="hintColor">#7E7C7C</color>
 </resources>

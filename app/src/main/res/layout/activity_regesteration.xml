@@ -1,9 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".RegesterationActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="5dp"
+        tools:context=".UI.regesteration.RegesterationActivity">
+
+        <TextView
+            android:id="@+id/regestertation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:paddingVertical="20dp"
+            android:text="@string/register"
+            android:textColor="@color/darkOrange"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@id/animationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toTopOf="@id/emailText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/regestertation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/regesteration" />
+
+        <ImageView
+            android:id="@+id/emailImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/email"
+            android:src="@drawable/ic_email_24"
+            app:layout_constraintBottom_toBottomOf="@id/emailText"
+            app:layout_constraintEnd_toStartOf="@id/userNameText"
+            app:layout_constraintTop_toTopOf="@id/emailText"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/email"
+            android:textColor="@color/darkOrange"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/emailEditText"
+            app:layout_constraintStart_toEndOf="@id/emailImg"
+            app:layout_constraintTop_toBottomOf="@id/animationView"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:hint="@string/ex_abc_gmail_com"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintBottom_toBottomOf="@id/emailText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/emailText"
+            app:layout_constraintTop_toTopOf="@id/emailText" />
+
+        <ImageView
+            android:id="@+id/userImg"
+            app:layout_constraintVertical_bias="1.0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/email"
+            android:src="@drawable/ic_user_24"
+            app:layout_constraintBottom_toBottomOf="@id/userNameText"
+            app:layout_constraintEnd_toStartOf="@id/userNameText"
+            app:layout_constraintStart_toStartOf="@id/emailImg"
+            app:layout_constraintTop_toTopOf="@id/userNameText" />
+
+        <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/user_name"
+            android:textColor="@color/darkOrange"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/emailEditText"
+            app:layout_constraintStart_toEndOf="@id/userImg"
+            app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+        <EditText
+            android:id="@+id/userNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:hint="@string/ex_user_name"
+            android:importantForAutofill="no"
+            android:inputType="textShortMessage"
+            android:padding="10dp"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintBottom_toBottomOf="@id/userNameText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userNameText"
+            app:layout_constraintTop_toTopOf="@id/userNameText" />
+
+        <ImageView
+            android:id="@+id/passworImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/email"
+            android:src="@drawable/ic_password_24"
+            app:layout_constraintBottom_toBottomOf="@id/passwordText"
+            app:layout_constraintEnd_toStartOf="@id/passwordText"
+            app:layout_constraintStart_toStartOf="@id/userImg"
+            app:layout_constraintTop_toTopOf="@id/passwordText" />
+
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
+            android:text="@string/password"
+            android:textColor="@color/darkOrange"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@id/emailEditText"
+            app:layout_constraintStart_toEndOf="@id/userImg"
+            app:layout_constraintTop_toBottomOf="@id/userNameText" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:hint="@string/ex_12ab"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintBottom_toBottomOf="@id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/passwordText"
+            app:layout_constraintTop_toTopOf="@id/passwordText" />
+
+        <ImageView
+            android:id="@+id/confermPassworImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/email"
+            android:src="@drawable/ic_password_24"
+            app:layout_constraintBottom_toBottomOf="@id/ConpasswordText"
+            app:layout_constraintEnd_toStartOf="@id/ConpasswordText"
+            app:layout_constraintStart_toStartOf="@id/passworImg"
+            app:layout_constraintTop_toTopOf="@id/ConpasswordText" />
+
+        <TextView
+            android:id="@+id/ConpasswordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="50dp"
+            android:text="Confirm password"
+            android:textColor="@color/darkOrange"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/conPasswordEditText"
+            app:layout_constraintStart_toEndOf="@id/confermPassworImg"
+            app:layout_constraintTop_toTopOf="@id/passworImg" />
+
+        <EditText
+            android:id="@+id/conPasswordEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape"
+            android:gravity="center"
+            android:hint="@string/ex_12ab"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textColorHint="@color/hintColor"
+            app:layout_constraintBottom_toBottomOf="@id/ConpasswordText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ConpasswordText"
+            app:layout_constraintTop_toTopOf="@id/ConpasswordText" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/button_shape"
+            android:padding="10dp"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:id="@+id/regesterButton"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/conPasswordEditText"
+            app:layout_constraintVertical_bias="0.237" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
