@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.news">
-    // start ahmed
+<!--    start ahmed-->
 
-    // end
+<!--    end-->
 
-    // start menna
+<!--    start menna-->
 
-    // end
+<!--    end-->
 
-    // start esraa
+<!--    start esraa-->
 
-    // end
+<!--    end-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.News">
-        <activity android:name=".MainActivity">
+        <activity android:name=".UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
