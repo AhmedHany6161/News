@@ -24,7 +24,7 @@ class RegesterViewModel(application: Application) : AndroidViewModel(application
             if (isPasswordValid(user.password))
             CoroutineScope(Dispatchers.IO).launch {
                 dataSourse.register(user)
-                done.value=true
+                done.postValue(true)
             }else{
                 checkData.value="Password is week try another format"
             }
@@ -41,5 +41,9 @@ class RegesterViewModel(application: Application) : AndroidViewModel(application
     }
     fun confirmPassword(password: String,conPassword: String) {
         checkPassword.value = password == conPassword
+    }
+
+    fun checkUserName(toString: String) : Boolean {
+        return toString != ""
     }
 }

@@ -2,6 +2,7 @@ package com.example.news.UI.regesteration
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -20,22 +21,15 @@ class RegesterationActivity : AppCompatActivity() {
             ViewModelProvider(this, ViewModelProvider.AndroidViewModelFactory.getInstance(application))[RegesterViewModel::class.java]
 
         binding.regesterButton.setOnClickListener {
-            regesterViewModel.dataNotEpety.observe(this,{
-                if (!it){
-                    val builder = AlertDialog.Builder(this)
-                    builder.setTitle("Please Enter User Name")
-                    builder.setPositiveButton("Ok") { dialog,_ ->
-                        dialog.dismiss()
-                    }
-                    builder.show()
-                }else{
-                    regesterViewModel.confirmPassword(
-                        binding.passwordEditText.text.toString(),
-                        binding.conPasswordEditText.text.toString()
-                    )
-                }
-            })
-
+           val b= regesterViewModel.checkUserName(binding.userNameEditText.text.toString());
+            if (b) {
+                regesterViewModel.confirmPassword(
+                    binding.passwordEditText.text.toString(),
+                    binding.conPasswordEditText.text.toString()
+                )
+            }else{
+                Toast.makeText(this,"enter all data",Toast.LENGTH_SHORT).show()
+            }
         }
         regesterViewModel.checkPassword.observe(this,{
             if (it){
@@ -73,6 +67,8 @@ class RegesterationActivity : AppCompatActivity() {
             binding.passwordEditText.setText("")
             binding.conPasswordEditText.setText("")
             binding.userNameEditText.setText("")
+            Toast.makeText(this,"Register is successfully",Toast.LENGTH_SHORT).show()
+
         })
 
     }
