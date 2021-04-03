@@ -19,4 +19,6 @@
     <string name="password">Password</string>
     <string name="ex_user_name">EX.. user_name</string>
     <string name="ex_12ab">EX .. 12Ab$</string>
+    <string name="favourite">Favourite</string>
+    <string name="newsimage">newsImage</string>
 </resources>
