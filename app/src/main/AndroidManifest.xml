@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.News">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".RegesterationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
