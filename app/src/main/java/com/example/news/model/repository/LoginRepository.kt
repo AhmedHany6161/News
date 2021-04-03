@@ -5,7 +5,7 @@ import com.example.news.model.entitys.User
 import com.example.news.model.localData.LocalDatabase
 import com.example.news.model.localData.NewsDao
 
-class LoginRepository  private constructor(application: Application) {
+class LoginRepository(application: Application) {
     private val weatherDAO: NewsDao = LocalDatabase.getDatabase(application).getNewsDao()
 
     companion object {
