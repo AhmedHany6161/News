@@ -3,7 +3,7 @@ package com.example.news.model.entitys
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "user")
 class User(
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
