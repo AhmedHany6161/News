@@ -8,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageNews"
         android:layout_width="match_parent"
         android:layout_margin="10dp"
         android:layout_height="120dp"
@@ -25,13 +25,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:hint="@string/title"
+        tools:text="Title"
         android:textSize="35sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageNews"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toStartOf="@+id/imageNews"
+        app:layout_constraintTop_toBottomOf="@+id/imageNews" />
 
     <TextView
         android:id="@+id/date"
@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textSize="18sp"
-        android:hint="@string/date"
+        tools:text="Date"
         app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/title" />
 
@@ -50,7 +50,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginBottom="20dp"
         android:textSize="18sp"
-        android:hint="@string/author"
+        tools:text="Author"
         app:layout_constraintStart_toStartOf="@+id/title"
         app:layout_constraintTop_toBottomOf="@+id/date" />
 
