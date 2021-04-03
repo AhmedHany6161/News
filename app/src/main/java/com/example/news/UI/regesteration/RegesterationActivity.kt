@@ -1,11 +1,13 @@
 package com.example.news.UI.regesteration
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.example.news.LoginActivity
 import com.example.news.R
 import com.example.news.databinding.ActivityRegesterationBinding
 import com.example.news.model.entitys.User
@@ -68,6 +70,7 @@ class RegesterationActivity : AppCompatActivity() {
             binding.conPasswordEditText.setText("")
             binding.userNameEditText.setText("")
             Toast.makeText(this,"Register is successfully",Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, LoginActivity::class.java))
 
         })
 
