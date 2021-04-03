@@ -1,4 +1,7 @@
 package com.example.news.UI.home
 
-class HomeViewModel {
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+
+class HomeViewModel( application: Application) : AndroidViewModel(application) {
 }

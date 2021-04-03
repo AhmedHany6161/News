@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round_button2"
         android:backgroundTint="@color/darkOrange"
-        android:text="New"
+        tools:text="New"
         android:padding="7dp"
         android:textColor="@color/white"
         android:textSize="18sp"
