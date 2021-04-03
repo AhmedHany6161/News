@@ -21,7 +21,6 @@ class LoginViewModel ( application: Application) : AndroidViewModel(application)
 
     fun login(email: String,passwordValue :String){
         CoroutineScope(Dispatchers.IO).launch{
-            delay(1000)
             val  user=loginRepository.login(email,passwordValue)
             if(user!=null){
                valid.postValue(user.name)
