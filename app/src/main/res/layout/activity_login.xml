@@ -100,7 +100,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="12dp"
             android:textStyle="bold"
-            android:text="@string/signUp"
+            android:text="@string/signup"
             android:clickable="true"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/loginBtn"

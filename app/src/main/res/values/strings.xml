@@ -26,4 +26,7 @@
     <string name="title">Title</string>
     <string name="date">Date</string>
     <string name="signUp">Sign Up?</string>
+    <string name="signup">SignUp</string>
+
+    <string name="auther">author</string>
 </resources>

@@ -10,6 +10,8 @@ import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.example.news.R
+import com.example.news.UI.home.HomeActivity
+import com.example.news.UI.regesteration.RegesterationActivity
 import com.example.news.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
@@ -36,8 +38,8 @@ class LoginActivity : AppCompatActivity() {
 
        }
         binding.signUp.setOnClickListener {
-           // val intent = Intent(this, ::class.java)
-           // startActivity(intent)
+            val intent = Intent(this, RegesterationActivity::class.java)
+            startActivity(intent)
         }
 
         loginViewModel.isValid().observe(this,{
@@ -45,8 +47,11 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this,"incorrect email or password",Toast.LENGTH_LONG).show()
 
             }else{
+                val intent =Intent(this,HomeActivity::class.java)
+                startActivity(intent)
                 Toast.makeText(this, "Hello $it",Toast.LENGTH_LONG).show()
             }
         })
+
     }
 }
