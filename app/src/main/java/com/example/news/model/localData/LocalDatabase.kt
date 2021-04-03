@@ -4,9 +4,10 @@ import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.news.model.entitys.News
 import com.example.news.model.entitys.User
 
-@Database(entities = [User::class], version = 1 , exportSchema = false)
+@Database(entities = [User::class , News::class], version = 1 , exportSchema = false)
 abstract class LocalDatabase : RoomDatabase() {
     abstract fun getNewsDao(): NewsDao
     companion object {
