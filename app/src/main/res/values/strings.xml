@@ -13,4 +13,8 @@
     // end
     <string name="app_name">News</string>
     <string name="login">Login</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="signUp">Sign Up</string>
 </resources>
