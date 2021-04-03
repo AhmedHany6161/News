@@ -12,12 +12,24 @@ import kotlinx.coroutines.launch
 
 class RegesterViewModel(application: Application) : AndroidViewModel(application) {
     val checkData : MutableLiveData<String> = MutableLiveData<String>()
-    val dataSourse : LoginRepository= LoginRepository.getInstance(application)
+    val checkPassword : MutableLiveData<Boolean> = MutableLiveData<Boolean>()
+    val done : MutableLiveData<Boolean> = MutableLiveData<Boolean>()
+    val dataNotEpety : MutableLiveData<Boolean> = MutableLiveData<Boolean>()
+    private val dataSourse : LoginRepository= LoginRepository.getInstance(application)
     fun register(user: User) {
-        if (isEmailValid(user.email) && isPasswordValid(user.password)){
+        if (user.password==""){
+            dataNotEpety.value=false
+        }
+        if (isEmailValid(user.email)){
+            if (isPasswordValid(user.password))
             CoroutineScope(Dispatchers.IO).launch {
                 dataSourse.register(user)
+                done.value=true
+            }else{
+                checkData.value="Password is week try another format"
             }
+        }else{
+            checkData.value="Email is not correct"
         }
 
     }
@@ -27,5 +39,7 @@ class RegesterViewModel(application: Application) : AndroidViewModel(application
     fun isPasswordValid(password: String): Boolean {
         return password.length >= 6
     }
-
+    fun confirmPassword(password: String,conPassword: String) {
+        checkPassword.value = password == conPassword
+    }
 }

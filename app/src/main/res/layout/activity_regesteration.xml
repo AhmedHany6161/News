@@ -214,6 +214,7 @@
             android:padding="10dp"
             android:text="@string/register"
             android:textAllCaps="false"
+            android:id="@+id/regesterButton"
             android:textSize="15sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
