@@ -22,7 +22,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
-        <activity android:name=".RegesterationActivity">
+        <activity android:name=".UI.regesteration.RegesterationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
