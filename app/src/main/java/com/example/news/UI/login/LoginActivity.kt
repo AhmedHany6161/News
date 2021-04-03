@@ -1,7 +1,9 @@
 package com.example.news.UI.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
@@ -33,6 +35,10 @@ class LoginActivity : AppCompatActivity() {
            }
 
        }
+        binding.signUp.setOnClickListener {
+           // val intent = Intent(this, ::class.java)
+           // startActivity(intent)
+        }
 
         loginViewModel.isValid().observe(this,{
             if(it==null){
