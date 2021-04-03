@@ -19,9 +19,14 @@
     <string name="password">Password</string>
     <string name="ex_user_name">EX.. user_name</string>
     <string name="ex_12ab">EX .. 12Ab$</string>
+    <string name="favourite">Favourite</string>
+    <string name="newsimage">newsImage</string>
     <string name="login">Login</string>
+    <string name="author">Author</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="signUp">Sign Up?</string>
     <string name="signup">SignUp</string>
-    <string name="title">title</string>
-    <string name="date">date</string>
+
     <string name="auther">author</string>
 </resources>
