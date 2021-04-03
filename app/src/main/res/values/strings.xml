@@ -12,5 +12,16 @@
 
     // end
     <string name="app_name">News</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="ex_abc_gmail_com">Ex.. abc@gmail.com</string>
+    <string name="user_name">User Name</string>
+    <string name="password">Password</string>
+    <string name="ex_user_name">EX.. user_name</string>
+    <string name="ex_12ab">EX .. 12Ab$</string>
     <string name="login">Login</string>
+    <string name="signup">SignUp</string>
+    <string name="title">title</string>
+    <string name="date">date</string>
+    <string name="auther">author</string>
 </resources>
