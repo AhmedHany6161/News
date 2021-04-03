@@ -7,8 +7,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
-import com.example.news.LoginActivity
 import com.example.news.R
+import com.example.news.UI.login.LoginActivity
 import com.example.news.databinding.ActivityRegesterationBinding
 import com.example.news.model.entitys.User
 
@@ -29,6 +29,7 @@ class RegesterationActivity : AppCompatActivity() {
                     binding.passwordEditText.text.toString(),
                     binding.conPasswordEditText.text.toString()
                 )
+
             }else{
                 Toast.makeText(this,"enter all data",Toast.LENGTH_SHORT).show()
             }

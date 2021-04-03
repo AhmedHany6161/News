@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.News">
-        <activity android:name=".UI.home.HomeActivity"></activity>
+        <activity android:name=".UI.home.HomeActivity">
+
+        </activity>
+        <activity android:name=".UI.regesteration.RegesterationActivity">
+
+        </activity>
         <activity android:name=".UI.MainActivity"></activity>
         <activity android:name=".UI.login.LoginActivity">
             <intent-filter>

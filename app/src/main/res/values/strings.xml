@@ -19,4 +19,9 @@
     <string name="password">Password</string>
     <string name="ex_user_name">EX.. user_name</string>
     <string name="ex_12ab">EX .. 12Ab$</string>
+    <string name="login">Login</string>
+    <string name="signUp">SignUp</string>
+    <string name="title">title</string>
+    <string name="date">date</string>
+    <string name="auther">author</string>
 </resources>
