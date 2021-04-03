@@ -26,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel= ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application))[LoginViewModel::class.java]
        binding.loginBtn.setOnClickListener {
-           Toast.makeText(this,"invalid email",Toast.LENGTH_LONG).show()
 
            val userEmail =binding.email.text.toString()
            val password =binding.password.text.toString()

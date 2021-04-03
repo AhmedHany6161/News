@@ -8,9 +8,11 @@ import com.example.news.model.entitys.User
 import com.example.news.model.localData.LocalDatabase
 import com.example.news.model.localData.NewsDao
 import com.example.news.model.repository.LoginRepository
-import kotlinx.coroutines.runBlocking
-import org.junit.After
-import org.junit.Assert.assertThat
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -32,7 +34,7 @@ class LoginReposTest {
         @Test
         @Throws(Exception::class)
         fun writeUserAndReadInList() {
-            runBlocking {
+            CoroutineScope(Dispatchers.IO).launch {
                 val user: User = User(name = "ahmed",email = "email1",password = "password")
                 loginRepository.register(user)
 
