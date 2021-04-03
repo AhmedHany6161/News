@@ -12,4 +12,5 @@
 
     // end
     <string name="app_name">News</string>
+    <string name="login">Login</string>
 </resources>

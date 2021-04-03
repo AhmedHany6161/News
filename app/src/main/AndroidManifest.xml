@@ -20,6 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.News">
         <activity android:name=".UI.MainActivity">
+        </activity>
+        <activity android:name="com.example.news.UI.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
