@@ -8,6 +8,7 @@ import com.example.news.model.entitys.User
 import com.example.news.model.repository.LoginRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class LoginViewModel ( application: Application) : AndroidViewModel(application){
@@ -18,8 +19,9 @@ class LoginViewModel ( application: Application) : AndroidViewModel(application)
         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    fun login(passwordValue :String,email: String){
+    fun login(email: String,passwordValue :String){
         CoroutineScope(Dispatchers.IO).launch{
+            delay(1000)
             val  user=loginRepository.login(email,passwordValue)
             if(user!=null){
                valid.postValue(user.name)

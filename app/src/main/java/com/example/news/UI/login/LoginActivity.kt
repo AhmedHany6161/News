@@ -26,7 +26,6 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel= ViewModelProvider(this,
             ViewModelProvider.AndroidViewModelFactory.getInstance(application))[LoginViewModel::class.java]
        binding.loginBtn.setOnClickListener {
-           Toast.makeText(this,"invalid email",Toast.LENGTH_LONG).show()
 
            val userEmail =binding.email.text.toString()
            val password =binding.password.text.toString()
@@ -45,7 +44,6 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.isValid().observe(this,{
             if(it==null){
                 Toast.makeText(this,"incorrect email or password",Toast.LENGTH_LONG).show()
-
             }else{
                 val intent =Intent(this,HomeActivity::class.java)
                 startActivity(intent)
